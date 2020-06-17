@@ -22,6 +22,8 @@ Route::get('/', function () {
 // });
 
 Route::get('/todos','todosController@index');
+
+Route::get('/todos','todosController@index');
 Route::get('/todos/{todo}','todosController@show');
 Route::get('/create','todosController@create');
 Route::post('/create','todosController@store');
@@ -31,3 +33,7 @@ Route::get('/todos/{todo}/delete','todosController@destroy');
 Route::get('/todos/{todo}/complete','todosController@complete');
 
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
